@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@100;300;400;500;700;900&display=swap') 
-
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 * {
   margin: 0;
@@ -8,14 +7,11 @@
   scroll-behavior: smooth;
 }
 
-
 :root {
   --primary: #ff3700;
 }
 
-
 body {
   background: #000000;
-  font-family: 'Roboto', sans-serif;
-
+  font-family: 'Roboto', sans-serif; /* Font stack with a fallback to sans-serif */
 }
