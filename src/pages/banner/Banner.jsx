@@ -8,6 +8,7 @@ import MovieSwiper from "../../components/MovieSwiper";
 
 const Banner = () => {
   const [movies, setMovies] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState({});
 
   const fetchData = () => {
     fetch(
@@ -22,30 +23,37 @@ const Banner = () => {
     fetchData();
   }, []);
 
-  const handleSlideChange = id => {
+// 
 
+  const handleSlideChange = id => {
+    // Find movie that was clicked
+    const clickedMovie = movies.find(movie => movie.id === id);
+    // Update selectedMovie state
+    setSelectedMovie(clickedMovie);
+    console.log(clickedMovie);
   }
+
+  // Image path
+// <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+// {`https://image.tmdb.org/t/p/w500${selectedMovie.poster_path}`}
 
   return (
     <div className="banner">
-      {
-        movies && movies.lenth>0 && movies.map(movie=>(
+    
           <div className="movie">
-          <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="Background" className={`bgImg ${movie.active ? 'id' : undefined}`} />
+          <img src={`https://image.tmdb.org/t/p/w500${selectedMovie.poster_path}`} alt="" className='bgImg active' />
           <div className="container-fluid">
             <div className="row">
               <div className="col-lg-6 col-md-12">
-                <MovieContent movie={movie} />
+                <MovieContent />
               </div>
               <div className="col-lg-6 col-md-12">
-                <MovieDate movie={movie} />
-                <PlayBtn movie={movie} />
+                <MovieDate />
+                <PlayBtn />
               </div>
             </div>
           </div>
         </div>
-        ))
-      }
    
       {
         movies && movies.length>0 && <MovieSwiper slides={movies} slideChange={handleSlideChange} />
