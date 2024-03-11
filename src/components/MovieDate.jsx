@@ -1,10 +1,10 @@
 import React from 'react';
 import './movieDate.css'
 
-const MovieDate = () => {
+const MovieDate = ({selectedMovie}) => {
   return (
     <div className="date active">
-    <h2>On 15th August</h2>
+    <h2>ON {selectedMovie.release_date}</h2>
   </div>
   )
 }

@@ -16,30 +16,36 @@
 
 
 .movie-title {
+    color: var(--primary);
+    font-size: 40px;
     max-width: 250px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    display: inline;
 }
 
-.banner .content h4 {
+
+
+.banner .content h2 {
     color: rgba(255, 255, 2555, 0.6);
     font-weight: 400;
     font-size: 30px;
+    margin-top: 10px;
 }
 
-.banner .content h4 span {
+.banner .content h2 span {
     padding: 0 10px;
     border-right: 1px solid rgba(255, 255, 2555, 0.6);
 }
 
-.banner .content h4 span:first-child {
+.banner .content h2 span:first-child {
     padding-left: 0;
 }
 
-.banner .content h4 span:last-child {
+.banner .content h2 span:last-child {
     border-right: 0;
 }
 
-.banner .content h4 span i {
+.banner .content h2 span i {
     background: var(--primary);
     color: #ffffff;
     padding: 0 8px;

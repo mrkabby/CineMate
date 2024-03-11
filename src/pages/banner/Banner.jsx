@@ -41,14 +41,14 @@ const Banner = () => {
     <div className="banner">
     
           <div className="movie">
-          <img src={`https://image.tmdb.org/t/p/w500${selectedMovie.poster_path}`} alt="" className='bgImg active' />
+          <img src={`https://image.tmdb.org/t/p/w500${selectedMovie.backdrop_path}`} alt="" className='bgImg active' />
           <div className="container-fluid">
             <div className="row">
               <div className="col-lg-6 col-md-12">
-                <MovieContent />
+                <MovieContent selectedMovie={selectedMovie}/>
               </div>
               <div className="col-lg-6 col-md-12">
-                <MovieDate />
+                <MovieDate selectedMovie={selectedMovie}/>
                 <PlayBtn />
               </div>
             </div>
