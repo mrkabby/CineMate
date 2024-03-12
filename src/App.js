@@ -6,7 +6,7 @@ import Banner from "./pages/banner/Banner";
 function App() {
   return (
     <>
-    <Banner />
+  
     </>
   );
 }
