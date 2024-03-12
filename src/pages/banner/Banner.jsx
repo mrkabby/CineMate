@@ -10,6 +10,7 @@ const Banner = () => {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState({});
 
+  // This function fetches top rated movie data and stores it in 'movies' object
   const fetchData = () => {
     fetch(
       "https://api.themoviedb.org/3/movie/top_rated?api_key=528f87728aee2ed45584d7e02ef65390"
@@ -23,8 +24,8 @@ const Banner = () => {
     fetchData();
   }, []);
 
-// 
-
+  
+  // This function changes movie info when image is clicked
   const handleSlideChange = id => {
     // Find movie that was clicked
     const clickedMovie = movies.find(movie => movie.id === id);
