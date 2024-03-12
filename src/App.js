@@ -5,7 +5,7 @@ import Trend from "./pages/trend/Trend";
 function App() {
   return (
     <>
-    <Trend/>
+    
     </>
   );
 }
