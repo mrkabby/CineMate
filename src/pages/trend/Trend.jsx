@@ -10,7 +10,7 @@ import TrendCard from '../../components/TrendCard'
 
 function Trend() {
     const [slides, setSlides] = useState([]);
-    const fetchData = () => {
+    const fetchData =  () => {
         fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=ce84f9a1e267020ce2e0b6973f4fcbbc')
             .then(res => res.json())
             .then(data => {
@@ -26,7 +26,7 @@ function Trend() {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, );
 
 
 
@@ -34,7 +34,7 @@ function Trend() {
         <section id='trend' className='trend'>
             <div className='container-fluid'>
                 <div className='row'>
-                    <h4 className='section-title'>UPCOMING </h4>
+                    <h4 className='section-title'>UPCOMING MOVIES </h4>
                     <div className='row'>
 
                         <Swiper
@@ -60,15 +60,7 @@ function Trend() {
                                     </SwiperSlide>
                                 ))
                             }
-                            <SwiperSlide>Slide 1</SwiperSlide>
-                            <SwiperSlide>Slide 2</SwiperSlide>
-                            <SwiperSlide>Slide 3</SwiperSlide>
-                            <SwiperSlide>Slide 4</SwiperSlide>
-                            <SwiperSlide>Slide 5</SwiperSlide>
-                            <SwiperSlide>Slide 6</SwiperSlide>
-                            <SwiperSlide>Slide 7</SwiperSlide>
-                            <SwiperSlide>Slide 8</SwiperSlide>
-                            <SwiperSlide>Slide 9</SwiperSlide>
+                          
                         </Swiper>
                     </div>
                 </div>
