@@ -7,6 +7,8 @@ import Trend from "./pages/trend/Trend";
 
 
 
+import Main from './pages/main/Main';
+
 function App() {
   return (
     <>
