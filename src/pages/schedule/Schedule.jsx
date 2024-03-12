@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import './Schedule.css';
+import Card from '../../components/card';
 
 const Schedule = () => {
-    const [data, setData] = useState([])
+    // const [data, setData] = useState([])
     const [movies, setMovies] = useState([])
 
     const fetchData = () => {
         fetch('https://api.themoviedb.org/3/movie/popular?api_key=ce84f9a1e267020ce2e0b6973f4fcbbc')
             .then(res => res.json())
-            .then(data => setData(data.results))
+            .then(data => setMovies(data.results))
             .catch(e => console.log(e.message));
     };
 
@@ -16,9 +17,9 @@ const Schedule = () => {
         fetchData();
     }, []);
 
-    useEffect(() => {
-        setMovies(data);
-    });
+    // // useEffect(() => {
+    // //     setMovies(data);
+    // });
 
 
 
@@ -35,18 +36,27 @@ const Schedule = () => {
                         <p>Filters</p>
                     </div>
                     <div className='row mt-5'>
-                    {movies && movies.length > 0 && movies.map(movie => (
-    <h1 key={movie.id}>{`${movie.original_title}`}</h1>
-))}
+                        {/* {movies && movies.length > 0 && movies.map(movie => ( */}
+                        {movies.map((movie) => {
+                            const imageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                            return (
+                                <Card
+                                    image={imageUrl}
+                                    title={movie.title}                                   
+                                    release={movie.release_date}
+                                   
+                                  
 
+                                />
+                            )
+                        })}
 
-    
-</div>
+                    </div>
 
+                </div>
             </div>
-        </div>
-    </section >
-  )
+        </section >
+    )
 }
 
 export default Schedule
