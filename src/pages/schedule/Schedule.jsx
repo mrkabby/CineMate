@@ -35,15 +35,15 @@ const Schedule = () => {
                     <div className='filters'>
                         <p>Filters</p>
                     </div>
-                    <div className='row mt-5'>
+                    <div className='trial'>
                         {/* {movies && movies.length > 0 && movies.map(movie => ( */}
                         {movies.map((movie) => {
-                            const imageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                            const imageUrl = `https://image.tmdb.org/t/p/w200${movie.poster_path}`
                             return (
                                 <Card
                                     image={imageUrl}
                                     title={movie.title}                                   
-                                    release={movie.release_date}
+                                   Rating={movie.vote_average}
                                    
                                   
 

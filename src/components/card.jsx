@@ -1,23 +1,24 @@
 import React from 'react'
 import './card.css'
 
-function Card ({image,title, overview, release, adult,language,popularity,video,voteAverage, voteCount, backdrop}) {
+function Card ({image,Rating,title,language,voteAverage}) {
   return (
-   <div className='col=lg=2 col=md=4 col=sm=6'> 
+   <div className=''> 
    <div className='movie-card'>
    <img src= {image} /> 
    <div className='content'>
-    <h3>{title}</h3>    
-    <p>{release}</p>
-    
-    
-   </div>
-    
+    <p>{Rating} | category</p>    
+    <h4>{title} </h4>
 
-    <div className="card-icons"></div>
+    <div className="card-icons">
+      
     <ion-icon name="add-outline"></ion-icon>
     <ion-icon name="play-outline"></ion-icon>
+    </div>
    </div>
+     </div>
+    
+
    </div>
 
   )
