@@ -1,0 +1,15 @@
+import React from 'react';
+import './playBtn.css';
+
+const PlayBtn = () => {
+  return (
+    <div className="trailer   d-flex align-items-center justify-content-center active">
+    <a href="#" className="playBtn">
+      <ion-icon name="play-outline"></ion-icon>
+    </a>
+    <p>Watch trailer</p>
+  </div>
+  )
+}
+
+export default PlayBtn;
