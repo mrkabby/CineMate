@@ -28,45 +28,109 @@ function Trend() {
         fetchData();
     }, );
 
-
-
     return (
         <section id='trend' className='trend'>
             <div className='container-fluid'>
                 <div className='row'>
-                    <h4 className='section-title'>UPCOMING MOVIES </h4>
-                    <div className='row'>
-
-                        <Swiper
-                            spaceBetween={30}
-                            autoplay={{
-                                delay: 2500,
-                                disableOnInteraction: false,
-                            }}
-                            loop={true}
-                            slidesPerView={3}
-                            freeMode={true}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            modules={[FreeMode, Pagination, Autoplay]}
-                            className="trendSwiper"
-                        >
-                            {slides.length > 0 &&
-                                slides.map((slide, index) => (
-                                    <SwiperSlide key={slide.id}>
-                                        <TrendCard slide={slide} />
-                                        <p>{index}</p>
-                                    </SwiperSlide>
-                                ))
-                            }
-                          
-                        </Swiper>
-                    </div>
+                    <h4 className='section-title'>UPCOMING MOVIES</h4>
                 </div>
+                <div className='row'>
+                    <Swiper
+                        spaceBetween={30}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        loop={true}
+                        slidesPerView={3}
+                        freeMode={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[FreeMode, Pagination, Autoplay]}
+                        className="trendSwiper"
+
+                    >
+                        <div className='trendy'>
+
+                            {/* {movies && movies.length > 0 && movies.map(movie => ( */}
+                            {slides.map((slide) => {
+                                const imageUrl = `https://image.tmdb.org/t/p/w200${slide.poster_path}`
+
+                                return (
+                                    <SwiperSlide >
+
+                                        <TrendCard
+                                            image={imageUrl}
+                                            title={slide.title}
+                                            date={slide.dates}
+                                            language={slide.original_language}
+
+
+                                        />
+                                    </SwiperSlide>
+                                )
+                            })}
+                           
+                    
+
+                        </div>
+
+                    </Swiper>
+
+
+
+
+
+
+                </div>
+
             </div>
-        </section>
-    );
+        
+        </section > 
+    )
+
+
+    
+
+
+    // return (
+    //     <section id='trend' className='trend'>
+    //         <div className='container-fluid'>
+    //             <div className='row'>
+    //                 <h4 className='section-title'>UPCOMING MOVIES </h4>
+    //                 <div className='row'>
+
+    //                     <Swiper
+    //                         spaceBetween={30}
+    //                         autoplay={{
+    //                             delay: 2500,
+    //                             disableOnInteraction: false,
+    //                         }}
+    //                         loop={true}
+    //                         slidesPerView={3}
+    //                         freeMode={true}
+    //                         pagination={{
+    //                             clickable: true,
+    //                         }}
+    //                         modules={[FreeMode, Pagination, Autoplay]}
+    //                         className="trendSwiper"
+    //                     >
+    //                         {slides.length > 0 &&
+    //                             slides.map((slide, index) => (
+    //                                 <SwiperSlide key={slide.id}>
+    //                                     <TrendCard slide={slide} />
+    //                                     <p>{index}</p>
+    //                                 </SwiperSlide>
+    //                             ))
+    //                         }
+                          
+    //                     </Swiper>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     </section>
+    // );
 }
 
 export default Trend;

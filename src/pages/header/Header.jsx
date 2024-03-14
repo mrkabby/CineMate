@@ -6,8 +6,11 @@ import Search from '../../components/Search'
 
 const Header = () => {
   return (
+
    <header>
     <a href="/" className="logo">CineMate</a>
+    <div className=''>
+
         <ul className='nav'>
         {    navListData.map(nav => (
                 <NavListItem key={nav._id} nav={nav}/>
@@ -16,6 +19,7 @@ const Header = () => {
         {/* <NavListItem name='Home'/>
         <NavListItem name='Schedule'/> */}
         </ul>
+    </div>
         <Search />
    </header>
   )

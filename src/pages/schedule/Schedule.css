@@ -28,3 +28,7 @@ section .section-title {
     );
     z-index: 1000;
 }
+.container{
+    display: flex;
+    
+}

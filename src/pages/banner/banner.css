@@ -5,6 +5,7 @@
     padding: 0 100px;
     overflow: hidden;
     transition: 0.5s;
+    margin-top: 2rem;
 }
 
 .banner::after {
@@ -54,5 +55,6 @@
 .row {
 padding-top: 20px;
 }
+
 
 

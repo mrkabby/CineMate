@@ -26,3 +26,6 @@
         -webkit-mask-clip: text, padding-box;
         -webkit-mask-composite: xor;
     }
+    .date{
+        margin-top: 7rem;
+    }

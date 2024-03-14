@@ -6,6 +6,7 @@ const Main = () => {
   return (
     <main>
         <Schedule/>
+        
 
     </main>
   )
