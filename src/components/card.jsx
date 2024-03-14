@@ -24,4 +24,4 @@ function Card ({image,Rating,title,language,voteAverage}) {
   )
 }
 
-export default Card
+export default Card;

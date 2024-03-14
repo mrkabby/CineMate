@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import './trend.css';
+import './toprated.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules'
-import TrendCard from '../../components/TrendCard'
+import TopCard from './TopCard'
+import Card from '../../components/card';
 
 
-function Trend() {
+function TopRated() {
     const [slides, setSlides] = useState([]);
     const fetchData =  () => {
-        fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=ce84f9a1e267020ce2e0b6973f4fcbbc')
+        fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=528f87728aee2ed45584d7e02ef65390')
             .then(res => res.json())
             .then(data => {
                 setSlides(data.results);
@@ -31,13 +32,18 @@ function Trend() {
 
 
     return (
+        
         <section id='trend' className='trend'>
             <div className='container-fluid'>
                 <div className='row'>
-                    <h4 className='section-title'>UPCOMING MOVIES </h4>
+                    <h4 className='section-title'>Top Rated </h4>
                     <div className='row'>
 
+                    
+
                         <Swiper
+
+                        
                             spaceBetween={30}
                             autoplay={{
                                 delay: 2500,
@@ -54,10 +60,16 @@ function Trend() {
                         >
                             {slides.length > 0 &&
                                 slides.map((slide, index) => (
+                        
+                                  
+                                    
                                     <SwiperSlide key={slide.id}>
-                                        <TrendCard slide={slide} />
+                                        <TopCard slide={slide} />
                                         <p>{index}</p>
+                                        
                                     </SwiperSlide>
+                                    
+                                    
                                 ))
                             }
                           
@@ -66,7 +78,8 @@ function Trend() {
                 </div>
             </div>
         </section>
+        
     );
 }
 
-export default Trend;
+export default TopRated;
