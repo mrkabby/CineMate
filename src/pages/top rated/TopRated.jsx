@@ -6,7 +6,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules'
 import TopCard from './TopCard'
-import Card from '../../components/card';
+
 
 
 function TopRated() {

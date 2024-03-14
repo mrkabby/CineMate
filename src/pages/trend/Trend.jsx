@@ -29,24 +29,6 @@ function Trend() {
     }, );
 
 
-  const [slides, setSlides] = useState([]);
-
-
-  const fetchData = () => {
-    fetch(
-      "https://api.themoviedb.org/3/movie/upcoming?api_key=ce84f9a1e267020ce2e0b6973f4fcbbc"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setSlides(data.results);
-        console.log(slides);
-      })
-      .catch((e) => console.log(e.message));
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <>

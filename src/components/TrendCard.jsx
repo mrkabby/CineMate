@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import "./trendcard.css";
-
 import Details from "./Details";
 import useQueryVideos from "../hooks/useQueryVideos";
 
