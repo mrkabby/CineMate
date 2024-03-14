@@ -1,54 +1,48 @@
-import React, { useEffect, useState } from 'react'
-import YouTube from 'react-youtube'
+import ripple from '../Images/ripple.svg'
+import "react-responsive-modal/styles.css";
+import { Modal } from "react-responsive-modal";
+import YouTube from "react-youtube";
+import './details.css'
 
-const Details = () => {
-    
-    const [allmovies, setAllmovies] = useState([])
-    const [videos, setVideos] = useState([])
-
- 
-const getAllmovie = async () => {
-    try{
-        await fetch ('https://api.themoviedb.org/3/discover/movie?api_key=528f87728aee2ed45584d7e02ef65390')
-        .then(res => res.json())
-        .then(json => setAllmovies(json.results))
-    }catch(err){
-        console.error(err)
-    }
-}    
-
-const getVideos = async () => {
-    try{
-        await fetch (`https://api.themoviedb.org/3/movie/${id}/videos?api_key=528f87728aee2ed45584d7e02ef65390`)
-        .then(res => res.json())
-        .then(json => setVideos(json.results))
-    
-    }catch(err){
-        console.error(err)
-    }
-    
-    
-}
-
-useEffect(() => {
-    getAllmovie()
-    getVideos()
-},[])
-
+const Details = ({open, onClose, item, itemVideo, loading}) => {
+    const onPlayerReady = (event) => {
+        // access to player in all event handlers via event.target
+        event.target.pauseVideo();
+      }
 
   return (
     <div>
-        {allmovies.map((data) => {
-            return
-             <>
-             <div key={data.id}>
-            <YouTube videoId={videos[0]?.key}/>
-            </div>
-            </>
-        })}
-
-    </div>
+    <Modal
+      open={open}
+      onClose={onClose}
+      center
+      id="setItem"
+      classNames={{
+        overlayAnimationIn: "customEnterOverlayAnimation",
+        overlayAnimationOut: "customLeaveOverlayAnimation",
+        modalAnimationIn: "customEnterModalAnimation",
+        modalAnimationOut: "customLeaveModalAnimation",
+      }}
+      animationDuration={800}
+      showCloseIcon={false}
+    >
+      {loading ? (
+      <img src={ripple} />
+    ) : 
+      <div className="modalwidth">
+        <div key={itemVideo?.id}>
+          <h2>{itemVideo?.name}<ion-icon name="close-circle-outline"></ion-icon></h2>
+          <YouTube videoId={itemVideo?.key} onReady={onPlayerReady} />
+        </div>
+        <div className='content'>
+        <h1><i>{item.title} | {<ion-icon name="star-half-outline"></ion-icon>} {item.vote_average} | {item.original_language}</i></h1>
+        <h1>{item.release_date}</h1>
+        <h3>{item.overview}</h3>
+        </div>
+      </div>}
+    </Modal>
+  </div>
   )
 }
 
-export default Details;
+export default Details
