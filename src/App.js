@@ -10,7 +10,7 @@ import Header from "./pages/header/Header";
 function App() {
   return (
     <>
-   
+   <Trend />
     
 
     

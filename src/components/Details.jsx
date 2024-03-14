@@ -3,6 +3,7 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import YouTube from "react-youtube";
 import './details.css'
+import Button from './Button';
 
 const Details = ({open, onClose, item, itemVideo, loading}) => {
     const onPlayerReady = (event) => {
@@ -31,7 +32,10 @@ const Details = ({open, onClose, item, itemVideo, loading}) => {
     ) : 
       <div className="modalwidth">
         <div key={itemVideo?.id}>
-          <h2>{itemVideo?.name}<ion-icon name="close-circle-outline"></ion-icon></h2>
+            <div class="d-flex justify-content-between">
+          <h2>{itemVideo?.name}</h2>
+          <Button name='Close'/>
+          </div>
           <YouTube videoId={itemVideo?.key} onReady={onPlayerReady} />
         </div>
         <div className='content'>
