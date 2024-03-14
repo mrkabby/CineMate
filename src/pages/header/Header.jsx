@@ -8,7 +8,7 @@ const Header = () => {
   return (
 
    <header>
-    <a href="/" className="logo">CineMate</a>
+    <a href="/" className="logo"><h2>CineMate</h2></a>
     <div className=''>
 
         <ul className='nav'>

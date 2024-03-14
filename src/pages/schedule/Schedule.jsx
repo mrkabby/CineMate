@@ -43,7 +43,7 @@ const Schedule = () => {
                                 <Card
                                     image={imageUrl}
                                     title={movie.title}                                   
-                                   Rating={movie.vote_average}
+                                  
                                    
                                   
 

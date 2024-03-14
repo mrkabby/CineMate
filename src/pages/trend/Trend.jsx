@@ -42,7 +42,7 @@ function Trend() {
                             disableOnInteraction: false,
                         }}
                         loop={true}
-                        slidesPerView={3}
+                        slidesPerView={5}
                         freeMode={true}
                         pagination={{
                             clickable: true,
@@ -55,7 +55,7 @@ function Trend() {
 
                             {/* {movies && movies.length > 0 && movies.map(movie => ( */}
                             {slides.map((slide) => {
-                                const imageUrl = `https://image.tmdb.org/t/p/w200${slide.poster_path}`
+                                const imageUrl = `https://image.tmdb.org/t/p/w500${slide.poster_path}`
 
                                 return (
                                     <SwiperSlide >
@@ -63,9 +63,7 @@ function Trend() {
                                         <TrendCard
                                             image={imageUrl}
                                             title={slide.title}
-                                            date={slide.dates}
-                                            language={slide.original_language}
-
+                                            
 
                                         />
                                     </SwiperSlide>

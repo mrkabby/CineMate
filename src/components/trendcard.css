@@ -1,4 +1,4 @@
-/* section .movie-card{
+section .trend-card{
     border: none;
     position: relative;
     border-radius: 0;
@@ -6,7 +6,7 @@
      box-shadow: 0 0 16px rgba(255, 255, 255, 0.5); 
 }
 
-section .movie-card::before {
+section .trend-card::before {
     position:absolute;
     content: '';
     top: 0;
@@ -18,26 +18,26 @@ section .movie-card::before {
     visibility: hidden;
     transition: 0.5s;
     transform: scale(0);
-} */
-/* 
-section .movie-card p{
+} 
+
+section .trend-card p{
     color: #dddddd;
     font-size: 1.2rem;
     font-weight: 400;
     text-align: center;
     padding: 10px 0;
 
-} */
+} 
 
- /* .movie-card h3{
+  .trend-card h3{
     color: #dddd;
     font-size: 1.2rem;
     font-weight: 400;
     text-align: center;
 padding: 10px 0; 
 
-} */
-section .trend-card .content{
+} 
+ section .trend-card .content{
     position: absolute;
     top: 0;
     left: 0;
@@ -101,7 +101,8 @@ section .trend-card:hover::before {
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 gap: 20px;
-} 
+}  
+
 
 
 /* .trend-card {

@@ -69,8 +69,8 @@ section p {
 }
 .trial{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
     
 }
 

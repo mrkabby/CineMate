@@ -41,7 +41,7 @@ const TopRated = () => {
                             disableOnInteraction: false,
                         }}
                         loop={true}
-                        slidesPerView={3}
+                        slidesPerView={5}
                         freeMode={true}
                         pagination={{
                             clickable: true,
@@ -54,7 +54,7 @@ const TopRated = () => {
 
                             {/* {movies && movies.length > 0 && movies.map(movie => ( */}
                             {tmovies.map((movies) => {
-                                const imageUrl = `https://image.tmdb.org/t/p/w300${movies.poster_path}`
+                                const imageUrl = `https://image.tmdb.org/t/p/w500${movies.poster_path}`
 
                                 return (
                                     <SwiperSlide >

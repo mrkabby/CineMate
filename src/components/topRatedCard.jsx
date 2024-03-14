@@ -1,21 +1,21 @@
 import React from 'react'
 import './topRatedCard.css'
 
-function TopRatedCard({ image, title, language, voteAverage }) {
+function TopRatedCard({ image, title  }) {
     return (
-        <div className=''>
+        <div  style= {{width: "200px"}} className=''>
             <div className='movie-card'>
-                <img src={image} alt='' />
+                <img style={{width: "200px"}} src={image} alt='' />
 
                 <div className='content'>
-                    <p>{voteAverage}  </p>
-                    <p>{language}</p>
+                    
+                    
                     <h4>{title} </h4>
 
 
                     <div className="card-icons">
 
-                        <ion-icon name="add-outline"></ion-icon>
+                       
                         <ion-icon name="play-outline"></ion-icon>
                     </div>
                 </div>

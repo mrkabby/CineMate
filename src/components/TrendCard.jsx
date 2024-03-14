@@ -1,28 +1,24 @@
 import React from 'react'
 import './trendcard.css';
 
-function TrendCard({ image, title, date, language }) {
+function TrendCard({ image, title }) {
     return (
         <div className=''>
-            <div className='trend-card'>
-                <img src={image} alt='' />
+            <div style={{width: "200px"}} className='trend-card'>
+                <img style={{width: "200px"}} src={image} alt='' />
 
                 <div className='content'>
 
                     <h4>{title} </h4>
-                    <p>{language}</p>
-                    <p> {date} </p>
-
+                    
 
                     <div className="trend-icons">
 
-                        <ion-icon name="add-outline"></ion-icon>
+                       
                         <ion-icon name="play-outline"></ion-icon>
-                        <a href='#'>
-                            Add to Calendar <ion-icon name="calendar-outtline"></ion-icon>
-                        </a>
 
                     </div>
+                        
 
 
                 </div>
