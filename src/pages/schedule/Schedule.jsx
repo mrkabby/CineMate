@@ -38,12 +38,18 @@ const Schedule = () => {
                     <div className='trial'>
                         {/* {movies && movies.length > 0 && movies.map(movie => ( */}
                         {movies.map((movie) => {
-                            const imageUrl = `https://image.tmdb.org/t/p/w200${movie.poster_path}`
+                            const imageUrl = `https://image.tmdb.org/t/p/w300${movie.poster_path}`
                             return (
                                 <Card
+
+                                    image={imageUrl}
+                                    title={movie.title}                                   
+                                  
+
                                 //     image={imageUrl}
                                 //     title={movie.title}                                   
                                 //    Rating={movie.vote_average}
+
                                    
                                   slide = {movie}
 

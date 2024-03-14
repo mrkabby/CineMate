@@ -32,3 +32,6 @@ header.scrolled {
 .nav {
     display: flex;
 }
+header{
+    background-color: black;
+}
