@@ -4,11 +4,7 @@ import "swiper/css";
 import { RouterProvider, createBrowserRouter} from "react-router-dom";
 import LandingPage from "./pages/landingPage/LandingPage";
 
-// const router = createBrowserRouter([
-//   { path: '/', element: <LandingPage/> },
-  
-  
-// ]);
+
 
 
 function App() {
@@ -19,8 +15,13 @@ function App() {
   ]);
   return (
     <>
-    <RouterProvider router={router} />
- 
+
+
+   <Trend />
+    
+
+    
+
 
 
     </>
