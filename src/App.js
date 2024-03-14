@@ -10,18 +10,11 @@ import TopRated from "./pages/topRated/topRated";
 
 
 
+
 function App() {
   return (
     <>
-    <Header />
-    <Banner />
-    <Main />
-    <Trend />
-    <TopRated/>
-    
-    <Footer/>
-    
-   
+
 
     
 

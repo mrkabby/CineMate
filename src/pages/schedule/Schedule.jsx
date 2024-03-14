@@ -41,11 +41,17 @@ const Schedule = () => {
                             const imageUrl = `https://image.tmdb.org/t/p/w300${movie.poster_path}`
                             return (
                                 <Card
+
                                     image={imageUrl}
                                     title={movie.title}                                   
                                   
+
+                                //     image={imageUrl}
+                                //     title={movie.title}                                   
+                                //    Rating={movie.vote_average}
+
                                    
-                                  
+                                  slide = {movie}
 
                                 />
                             )
