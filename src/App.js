@@ -6,13 +6,12 @@ import Trend from "./pages/trend/Trend";
 import Main from './pages/main/Main';
 import Header from "./pages/header/Header";
 
+
 function App() {
   return (
     <>
-    <Header />
-    <Banner />
-    <Main />
-    <Trend />
+   <Trend />
+    
 
     
 

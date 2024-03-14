@@ -1,5 +1,6 @@
 .trendSwiper .swiper{
     padding-top: 50px;
+    z-index: 1000;
 }
 
 .trendSwiper .swiper-slide{
@@ -14,4 +15,9 @@
     width: 100%;
     border-radius: 0px;
     height: auto;
+}
+
+.modalwidth {
+    width: 100%;
+    height: 100%;
 }

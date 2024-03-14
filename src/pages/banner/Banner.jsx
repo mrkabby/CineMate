@@ -31,7 +31,7 @@ const Banner = () => {
     const clickedMovie = movies.find(movie => movie.id === id);
     // Update selectedMovie state
     setSelectedMovie(clickedMovie);
-    console.log(clickedMovie);
+    // console.log(clickedMovie);
   }
 
   // Image path
