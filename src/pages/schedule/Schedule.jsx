@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Schedule.css';
 import Card from '../../components/card';
 import Header from '../header/Header';
-import Footer from '../footer/Footer';
+
 
 
 const Schedule = () => {
@@ -59,7 +59,7 @@ const Schedule = () => {
                 </div>
             </div>
         </section >
-        <Footer/>
+    
         </>
     )
 }

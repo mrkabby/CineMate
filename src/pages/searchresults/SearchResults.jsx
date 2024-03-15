@@ -3,7 +3,7 @@ import './SearchResults.css'
 import { useLocation } from 'react-router-dom';
 import Card from '../../components/card';
 import Header from '../header/Header';
-import Footer from '../footer/Footer';
+
 
 const SearchResults = () => {
   const location =useLocation()
@@ -38,7 +38,7 @@ const searchResults = location.state.searchResults
         </div>
     </div>
 </section >
-<Footer/>
+
     </>
 
     

@@ -4,7 +4,7 @@ import './movieDate.css'
 const MovieDate = ({selectedMovie}) => {
   return (
     <div className="date active">
-    <h2>ON {selectedMovie.release_date}</h2>
+    <h2>{selectedMovie.release_date}</h2>
   </div>
   )
 }

@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import TrendCard from "../../components/TrendCard";
 import Header from "../header/Header";
-import Footer from "../footer/Footer";
+
 
 function Trend() {
 
@@ -75,7 +75,7 @@ function Trend() {
           </div>
         </div>
       </section>
-      <Footer/>
+    
     </>
   );
 }
