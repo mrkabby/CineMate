@@ -34,7 +34,7 @@ const Details = ({ open, onClose, item, itemVideo, loading }) => {
                         <div key={itemVideo?.id}>
                             <div className="d-flex justify-content-between">
                                 <h2>{itemVideo?.name}</h2>
-                                <Button name='Close' />
+                                <Button name='Close' onClick={onClose} />
                             </div>
                             <YouTube videoId={itemVideo?.key} onReady={onPlayerReady} />
                         </div>
@@ -42,12 +42,12 @@ const Details = ({ open, onClose, item, itemVideo, loading }) => {
                             {/* Add null check for item object */}
                             {item && (
                                 <>
-                                    <h1><i>{item.title} | <ion-icon name="star-half-outline"></ion-icon> {item.vote_average} | {item.original_language}</i></h1>
+                                    <h1><i>{item.title} | <ion-icon style={{color:'gold'}} name="star-half-outline"></ion-icon> {item.vote_average} | {item.original_language}</i></h1>
                                     <h1>{item.release_date}</h1>
                                     <h3>{item.overview}</h3>
                                 </>
                             )}
-                        </div>
+                        </div > 
                     </div>}
             </Modal>
         </div>

@@ -16,7 +16,7 @@ export const Home = () => {
                   Binge all your favorite movies in one place
                 </p>
             
-                    <Link to="/LandingPage">
+                    <Link to="/landing">
                   <a href="#" class="custom-button">
                     <span class="background-overlay"></span>
                     <span class="icon-container">

@@ -51,7 +51,7 @@ const Banner = () => {
             </div>
             <div className="col-lg-6 col-md-12">
               <MovieDate selectedMovie={selectedMovie} />
-              <PlayBtn />
+              <PlayBtn slide={selectedMovie} />
             </div>
           </div>
         </div>

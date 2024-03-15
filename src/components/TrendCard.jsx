@@ -11,21 +11,31 @@ function TrendCard({ slide }) {
 
 
   return (
-    <>  
+    <div>
+
         <div>
           <div className="trend-card" onClick={() => setOpen(true)}>
             <img
               className="img-fluid"
               src={`https://image.tmdb.org/t/p/w200${slide.poster_path}`}
             />
-            <a href="#">
-              Add to Calendar <ion-icon name="calendar-outtline"></ion-icon>
-            </a>
+            <div className="content">
+          
+          <h4>{slide?.title} </h4>
+
+          <div className="card-icons" onClick={() => setOpen(true)}>
+           
+            <ion-icon name="play-outline"></ion-icon>
+          </div>
             <Details open={open} onClose={()=> setOpen(false)} item={slide} itemVideo={video} loading={loading}/>
           </div>
         </div>
+    </div>
+    </div>
+
+     
       
-    </>
+    
   );
 }
 export default TrendCard;

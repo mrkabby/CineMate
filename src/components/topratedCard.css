@@ -1,12 +1,13 @@
-section .trend-card{
+section .movie-card{
     border: none;
     position: relative;
     border-radius: 0;
     background: #000000 !important;
      box-shadow: 0 0 16px rgba(255, 255, 255, 0.5); 
+     gap: 10px;
 }
 
-section .trend-card::before {
+section .movie-card::before {
     position:absolute;
     content: '';
     top: 0;
@@ -18,26 +19,26 @@ section .trend-card::before {
     visibility: hidden;
     transition: 0.5s;
     transform: scale(0);
-}
+} 
 
-section .trend-card p{
+section .movie-card p{
     color: #dddddd;
     font-size: 1.2rem;
     font-weight: 400;
     text-align: center;
     padding: 10px 0;
 
-}
+} 
 
- /* .movie-card h3{
+  .movie-card h3{
     color: #dddd;
     font-size: 1.2rem;
     font-weight: 400;
     text-align: center;
 padding: 10px 0; 
 
-} */
-section .trend-card .content{
+} 
+ section .movie-card .content{
     position: absolute;
     top: 0;
     left: 0;
@@ -54,7 +55,7 @@ section .trend-card .content{
     transform: scale(0);
 }
 
-section .trend-card .content h4 {
+section .movie-card .content h4 {
     position: relative;
     color: #ffffff;
     font-size: 1.2rem;
@@ -63,7 +64,7 @@ section .trend-card .content h4 {
     text-transform: uppercase;
 }
 
-section .trend-card .content h4::before{
+section .movie-card .content h4::before{
 position: absolute;
 content: '';
 left: 0;
@@ -79,18 +80,18 @@ background: linear-gradient(
 z-index: 1000;
 }
 
-section .trend-card .content ion-icon{
+section .movie-card .content ion-icon{
     font-size: 2.5rem;
     transition: 0.3s;
     cursor: pointer;
 }
 
-section .trend-card .content ion-icon:hover {
+section .movie-card .content ion-icon:hover {
 color: var(--primary);
 }
 
-section .trend-card:hover .content,
-section .trend-card:hover::before {
+section .movie-card:hover .content,
+section .movie-card:hover::before {
     opacity: 1;
     visibility: visible;
     transform: scale(1);
@@ -101,33 +102,4 @@ section .trend-card:hover::before {
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 gap: 20px;
-} 
-
-
-
-/* .trend-card {
-    position: relative;
-}
-
-.trend-card a{
-    position: relative;
-    text-decoration: none;
-    background: var(--primary);
-    color: white;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    width: 100%;
-    padding: 10px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    transition: 0.3s;
-}
-
-.trend-card a:hover {
-    background: black;
-}
- */
-
+}  

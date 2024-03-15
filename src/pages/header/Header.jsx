@@ -4,6 +4,7 @@ import NavListItem from '../../components/NavListItem';
 import navListData from '../../data/navListData';
 import Search from '../../components/Search';
 import Button from '../../components/Button';
+import { Link } from 'react-router-dom';
 
 const Header = ({ scroll }) => {
   const [navList, setNavList] = useState(navListData);
@@ -24,13 +25,18 @@ const Header = ({ scroll }) => {
       <a href="/" className="logo">CineMate</a>
 
       <ul className='nav'>
-        {navList.map(nav => (
+        <li><Link to= {"/"}>HOME</Link></li>
+        <li> POPULAR</li>
+        <li>UPCOMING</li>
+        <li>TOP RATED</li>
+        <li></li>
+        {/* {navList.map(nav => (
           <NavListItem key={nav._id} nav={nav} navOnClick={handleNavOnClick} />
-        ))}
+        ))} */}
       </ul>
 
       <Search />
-      <Button icon={<ion-icon name="add-outline"></ion-icon>} name='Watchlist' />
+     
     </header>
   );
 };

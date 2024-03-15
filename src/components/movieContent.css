@@ -6,6 +6,7 @@
     transform: scale(0);
     transition: 1s;
     z-index: 1000;
+    
 }
 
 .banner .content.active {
@@ -26,7 +27,7 @@
 
 
 .banner .content h2 {
-    color: rgba(255, 255, 2555, 0.6);
+    color: #ffff;
     font-weight: 400;
     font-size: 30px;
     margin-top: 10px;
@@ -59,4 +60,7 @@
     line-height: 1.5em;
     color: #ffffff;
     margin: 20px 0 30px;
+}
+.content{
+    margin-top: 7rem;
 }

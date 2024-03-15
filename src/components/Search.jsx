@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SearchResults from '../pages/searchresults/SearchResults';
 import './search.css';
+import { Link } from 'react-router-dom';
 
 const Search = () => {
   const [query, setQuery] = useState('');
@@ -22,6 +23,7 @@ const Search = () => {
   };
 
   return (
+    
     <div className='search'>
       <input 
         type="text"
@@ -29,7 +31,10 @@ const Search = () => {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
+    
+
       <ion-icon name="search-outline" onClick={handleSearch}></ion-icon>
+    
 
       {searchResults && <SearchResults searchResults={searchResults} />}
     </div>

@@ -37,6 +37,8 @@ function Trend() {
           <div className="row">
             <h4 className="section-title">UPCOMING MOVIES </h4>
             <div className="row">
+              <div>
+
               <Swiper
                 spaceBetween={30}
                 autoplay={{
@@ -44,7 +46,7 @@ function Trend() {
                   disableOnInteraction: false,
                 }}
                 loop={true}
-                slidesPerView={3}
+                slidesPerView={5}
                 freeMode={true}
                 pagination={{
                   clickable: true,
@@ -52,6 +54,8 @@ function Trend() {
                 modules={[FreeMode, Pagination, Autoplay]}
                 className="trendSwiper"
               >
+                <div className="trendy">
+
                 {slides.length > 0 &&
                   slides.map((slide, index) => {
                     return (
@@ -61,7 +65,9 @@ function Trend() {
                       </SwiperSlide>
                     );
                   })}
+                </div>
               </Swiper>
+              </div>
             </div>
           </div>
         </div>

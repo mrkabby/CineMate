@@ -11,14 +11,14 @@ function Card({slide}) {
 
   return (
     <div className="">
-      <div className="movie-card">
-        <img src={`https://image.tmdb.org/t/p/w200${slide?.poster_path}`} />
+      <div style= {{width:'200px'}}className="movie-card">
+        <img style= {{width:'200px'}} src={`https://image.tmdb.org/t/p/w500${slide?.poster_path}`} />
         <div className="content">
-          <p>{slide?.vote_average} | category</p>
+          
           <h4>{slide?.title} </h4>
 
           <div className="card-icons" onClick={() => setOpen(true)}>
-            <ion-icon name="add-outline"></ion-icon>
+          
             <ion-icon name="play-outline"></ion-icon>
           </div>
         </div>

@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules'
-import TopCard from './TopCard'
+import TopRatedCard from '../../components/topratedCard';
 
 
 
@@ -50,7 +50,7 @@ function TopRated() {
                                 disableOnInteraction: false,
                             }}
                             loop={true}
-                            slidesPerView={3}
+                            slidesPerView={5}
                             freeMode={true}
                             pagination={{
                                 clickable: true,
@@ -64,7 +64,7 @@ function TopRated() {
                                   
                                     
                                     <SwiperSlide key={slide.id}>
-                                        <TopCard slide={slide} />
+                                        <TopRatedCard slide={slide} />
                                         <p>{index}</p>
                                         
                                     </SwiperSlide>
