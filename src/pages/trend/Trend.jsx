@@ -6,6 +6,8 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import TrendCard from "../../components/TrendCard";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 function Trend() {
 
@@ -32,6 +34,7 @@ function Trend() {
 
   return (
     <>
+    <Header/>
       <section id="trend" className="trend">
         <div className="container-fluid">
           <div className="row">
@@ -72,6 +75,7 @@ function Trend() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

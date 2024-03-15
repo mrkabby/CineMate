@@ -29,6 +29,7 @@ content h2 {
 .content p {
     font-size: 20px;
     margin-bottom: 40px;
+    color: #fff;
 }
 
 
@@ -91,6 +92,16 @@ content h2 {
 
 .button-text {
   position: relative;
+}
+
+.Clogo {
+  font-family: 'Racing Sans One', cursive;
+  font-size: 40px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 

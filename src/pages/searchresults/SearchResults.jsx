@@ -1,19 +1,47 @@
 import React from 'react';
+import './SearchResults.css'
+import { useLocation } from 'react-router-dom';
+import Card from '../../components/card';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
 
-const SearchResults = ({ searchResults }) => {
+const SearchResults = () => {
+  const location =useLocation()
+const searchResults = location.state.searchResults
+
   return (
-    <div className='container-fluid p-0 full-page'>
-      <h2>Search Results:</h2>
-
-      {searchResults.map((movie) => (
-        <div key={movie.id} >
-          <div >
-            <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} />
-          </div>
-          <p>{movie.title}</p>
+    <>
+    <Header/>
+    <section id='schedule' className='schedule'>
+    <div className='container-fluid'>
+        <div className='row'>
+            <h4 className='section-title'>Search Results</h4>
         </div>
-      ))}
+        <div className='row'>
+            <div className='filters'>
+                <p>Filters</p>
+            </div>
+            <div className='trial'>
+                {searchResults.map((movie) => {
+                    return (
+                        <Card
+                       
+                           
+                          slide = {movie}
+
+                        />
+                    )
+                })}
+
+            </div>
+
+        </div>
     </div>
+</section >
+<Footer/>
+    </>
+
+    
   );
 };
 

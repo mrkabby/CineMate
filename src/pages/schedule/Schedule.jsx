@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './Schedule.css';
 import Card from '../../components/card';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
+
 
 const Schedule = () => {
     // const [data, setData] = useState([])
@@ -26,6 +29,9 @@ const Schedule = () => {
 
 
     return (
+        <>
+        <Header/>
+        
         <section id='schedule' className='schedule'>
             <div className='container-fluid'>
                 <div className='row'>
@@ -38,12 +44,9 @@ const Schedule = () => {
                     <div className='trial'>
                         {/* {movies && movies.length > 0 && movies.map(movie => ( */}
                         {movies.map((movie) => {
-                            const imageUrl = `https://image.tmdb.org/t/p/w200${movie.poster_path}`
                             return (
                                 <Card
-                                //     image={imageUrl}
-                                //     title={movie.title}                                   
-                                //    Rating={movie.vote_average}
+                               
                                    
                                   slide = {movie}
 
@@ -56,6 +59,8 @@ const Schedule = () => {
                 </div>
             </div>
         </section >
+        <Footer/>
+        </>
     )
 }
 

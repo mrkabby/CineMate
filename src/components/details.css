@@ -1,6 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 .react-responsive-modal-root{
     /* display: block; */
     z-index: 99999!important;
+}
+
+.modalwidth h1{
+    margin-top: 4rem;
+}
+
+.iconsize {
+    font-size: 200px;
+}
+
+#setItem {
+    background: #000000;
+}
+
+@keyframes customEnterOverlayAnimation {
+        0%{
+            transform: scale(0)
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+@keyframes customLeaveOverlayAnimation {
+    0%{
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes customEnterModalAnimation {
+    0%{
+        transform: scale(0.2)
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes customLeaveModalAnimation {
+    0%{
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(10.2);
+    }
+}
+
+/* .content {
+
+} */
+
+.modalwidth {
+    background-color: #000000;
+    color: #ffff;
+    font-family: "Racing Sans One", sans-serif;
+    font-style: normal;
+    font-weight: 10;
+}
+
+.red{
+    color: var(--primary);
+}
+
+/* .react-responsive-modal-root{
+     display: block; 
+     z-index: 99999!important; 
 }
 
 .modalwidth h1{
@@ -51,6 +122,6 @@
     }
 }  
 
-/* .content {
+.content {
 
-} */
+}  */

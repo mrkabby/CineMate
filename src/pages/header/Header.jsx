@@ -26,9 +26,9 @@ const Header = ({ scroll }) => {
 
       <ul className='nav'>
         <li><Link to= {"/"}>HOME</Link></li>
-        <li> POPULAR</li>
-        <li>UPCOMING</li>
-        <li>TOP RATED</li>
+        <li><Link to={'/schedule'}>POPULAR </Link> </li>
+        <li><Link to= {'/trend'}>UPCOMING</Link></li>
+        <li><Link to={'/toprated'}>TOP RATED</Link></li>
         <li></li>
         {/* {navList.map(nav => (
           <NavListItem key={nav._id} nav={nav} navOnClick={handleNavOnClick} />

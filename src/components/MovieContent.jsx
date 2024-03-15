@@ -48,7 +48,7 @@ const MovieContent = ({ selectedMovie }) => {
 
 
   return (
-    <div className='content active'>
+    <div className='text-content active'>
       {/* <img src={titleImg} alt="Movie Title" className="movie-title" /> */}
       <h1 className="movie-title"><i>{selectedMovie.title}</i></h1>
       <h2>

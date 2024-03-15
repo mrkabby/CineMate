@@ -10,7 +10,7 @@ function Card({slide}) {
 
 
   return (
-    <div className="">
+    <div style={{position: 'relative'}}>
       <div style= {{width:'200px'}}className="movie-card">
         <img style= {{width:'200px'}} src={`https://image.tmdb.org/t/p/w500${slide?.poster_path}`} />
         <div className="content">

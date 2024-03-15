@@ -26,7 +26,7 @@ function App() {
     {path:"/schedule", element: <Schedule/>},
     {path:"/trend", element: <Trend/>},
     {path:"/toprated", element:<TopRated/>},
-    // {path:"/search", element: <SearchResults/>}
+    {path:"/search-results", element: <SearchResults/>}
 
   ])
   // const router= createBrowserRouter([
