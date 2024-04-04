@@ -11,6 +11,7 @@ export const Home = () => {
         <section>
           <section>
             <div className='coverImage'>
+              
               <div className='content'>
                 <h1>Unlimited movies </h1>
 
