@@ -1,11 +1,11 @@
 .swiper {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 80px;
 }
     
 .movieSwiper {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 65%;
     transform: translatex(-50%);
     width: 60vw;
