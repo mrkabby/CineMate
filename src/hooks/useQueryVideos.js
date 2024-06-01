@@ -10,7 +10,7 @@ const useQueryVideos = (id ) => {
     try {
       if (id) {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${id}/videos?api_key=528f87728aee2ed45584d7e02ef65390`
+          `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`
         );
         const result = await response.json();
         console.log(result.results);

@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import './header.css';
-import NavListItem from '../../components/NavListItem';
 import navListData from '../../data/navListData';
 import Search from '../../components/Search';
-import Button from '../../components/Button';
 import { Link } from 'react-router-dom';
 
 const Header = ({ scroll }) => {

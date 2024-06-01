@@ -12,7 +12,7 @@ import TopRatedCard from '../../components/topratedCard';
 function TopRated() {
     const [slides, setSlides] = useState([]);
     const fetchData =  () => {
-        fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=528f87728aee2ed45584d7e02ef65390')
+        fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`)
             .then(res => res.json())
             .then(data => {
                 setSlides(data.results);

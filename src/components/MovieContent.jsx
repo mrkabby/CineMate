@@ -12,7 +12,7 @@ const MovieContent = ({ selectedMovie }) => {
 
   const fetchData = () => {
     fetch(
-      "https://api.themoviedb.org/3/genre/movie/list?api_key=528f87728aee2ed45584d7e02ef65390"
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -49,7 +49,6 @@ const MovieContent = ({ selectedMovie }) => {
 
   return (
     <div className='text-content active'>
-      {/* <img src={titleImg} alt="Movie Title" className="movie-title" /> */}
       <h1 className="movie-title"><i>{selectedMovie.title}</i></h1>
       <h2>
         <span>{<ion-icon style={{color:'gold'}} name="star-half-outline"></ion-icon>} {selectedMovie.vote_average}</span>

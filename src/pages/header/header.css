@@ -6,7 +6,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 100px;
+    padding: 30px 40px;
     transition: 0.5s;
     z-index: 10000;
 }
@@ -21,7 +21,7 @@ header.scrolled {
 
 .logo {
     font-family: 'Racing Sans One', cursive;
-    font-size: 40px;
+    font-size: 35px;
     color: #fff;
     letter-spacing: 2px;
     font-weight: 800;
