@@ -1,27 +1,23 @@
 const navListData = [
     {
         _id: 1,
-        name: `Home`,
-        Link: "#",
-        active: true,
+        name: "Discover",
+        link: "discover"   
     },
     {
         _id: 2,
-        name: `schedule`,
-        Link: "#schedule",
-        active: false,
-    },
-    {
-        _id: 3,
-        name: `trending`,
-        Link: "#trending",
-        active: false,
+        name: "Popular",
+        link: "popular"
     },
     {
         _id: 4,
-        name: `top rated`,
-        Link: "#Watchlist",
-        active: false,
+        name: "Top Rated",
+        link: "top_rated"
+    },
+    {
+        _id: 3,
+        name: "Upcoming",
+        link: "upcoming"
     }
 ]
 

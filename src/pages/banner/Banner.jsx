@@ -37,7 +37,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="banner">
+    <div className="banner" id="discover">
       <div className="movie">
         <img
           src={`https://image.tmdb.org/t/p/w500${selectedMovie.backdrop_path}`}
