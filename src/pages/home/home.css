@@ -9,7 +9,7 @@
   text-align: center;
   font-size: 18px;
   background: #fff;
-  height: 70vh ;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +34,17 @@
   z-index: 10; /* Ensure this is above the swiper slides */
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -49,17 +60,20 @@
 .content h1 {
   font-size: 60px;
   margin-bottom: 30px;
+  animation: fadeInUp 1s ease-out both;
 }
 
 .content h2 {
   font-size: 30px;
   margin-bottom: 20px;
+  animation: fadeInUp 2s ease-out both;
 }
 
 .content p {
   font-size: 20px;
   margin-bottom: 40px;
   color: #fff;
+  animation: fadeInUp 3s ease-out both;
 }
 
 .custom-button {
@@ -75,6 +89,7 @@
   border: 2px solid #fcfcfc;
   border-radius: 9999px;
   text-decoration: none;
+  animation: fadeInUp 4s ease-out both;
 }
 
 .custom-button:hover {

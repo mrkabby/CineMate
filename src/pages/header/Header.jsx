@@ -1,40 +1,46 @@
-import React, { useState } from 'react';
-import './header.css';
-import navListData from '../../data/navListData';
-import Search from '../../components/Search';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./header.css";
+import navListData from "../../data/navListData";
+import Search from "../../components/Search";
+import { Link, useLocation } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
-const Header = ({ scroll }) => {
-  const [navList, setNavList] = useState(navListData);
-
-  const handleNavOnClick = (id) => {
-    const newNavList = navList.map(nav => {
-      if (nav._id === id) {
-        return { ...nav, active: true };
-      } else {
-        return { ...nav, active: false };
-      }
-    });
-    setNavList(newNavList);
-  };
-
+const Header = () => {
+  const location = useLocation();
   return (
-    <header className={`${scroll > 100 ? 'scrolled' : undefined}`}>
-      <a href="/" className="logo">CineMate</a>
+    <header>
+      <>
+        <div>
+          <Link to="/">
+            <h1 className="logo">CineMate</h1>
+          </Link>
+        </div>
 
-      <ul className='nav'>
-        <li><Link to= {"/"}>HOME</Link></li>
-        <li><Link to={'/schedule'}>POPULAR </Link> </li>
-        <li><Link to= {'/trend'}>UPCOMING</Link></li>
-        <li><Link to={'/toprated'}>TOP RATED</Link></li>
-        <li></li>
-        {/* {navList.map(nav => (
-          <NavListItem key={nav._id} nav={nav} navOnClick={handleNavOnClick} />
-        ))} */}
-      </ul>
-
-      <Search />
-     
+        <div className="nav">
+          {location.pathname !== "/landing" && (
+            <Link to="/landing">
+              <li>Home</li>
+            </Link>
+          )}
+          {navListData.map(({ _id, name, link }) => (
+            <li key={_id}>
+              <ScrollLink
+                activeClass="active"
+                to={link}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                {name}
+              </ScrollLink>
+            </li>
+          ))}
+        </div>
+        <div>
+          <Search />
+        </div>
+      </>
     </header>
   );
 };

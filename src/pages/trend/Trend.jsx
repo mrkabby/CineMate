@@ -8,74 +8,64 @@ import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import TrendCard from "../../components/TrendCard";
 import Header from "../header/Header";
 
-
 function Trend() {
+  const [slides, setSlides] = useState([]);
+  const fetchData = () => {
+    fetch(
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setSlides(data.results);
+      })
+      .catch((e) => console.log(e.message));
+  };
 
-    const [slides, setSlides] = useState([]);
-    const fetchData =  () => {
-        fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`)
-            .then(res => res.json())
-            .then(data => {
-                setSlides(data.results);
-                console.log(slides);
-            })
-            .catch(e => console.log(e.message));
-
- 
-
-    };
-
-
-    useEffect(() => {
-        fetchData();
-    }, );
-
-
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <>
-    <Header/>
-      <section id="trend" className="trend">
+      <Header />
+      <section id="upcoming" className="trend">
         <div className="container-fluid">
           <div className="row">
             <h4 className="section-title">UPCOMING MOVIES </h4>
             <div className="row">
               <div>
-
-              <Swiper
-                spaceBetween={30}
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                }}
-                loop={true}
-                slidesPerView={5}
-                freeMode={true}
-                pagination={{
-                  clickable: true,
-                }}
-                modules={[FreeMode, Pagination, Autoplay]}
-                className="trendSwiper"
-              >
-                <div className="trendy">
-
-                {slides.length > 0 &&
-                  slides.map((slide, index) => {
-                    return (
-                      <SwiperSlide key={slide.id}>
-                        <TrendCard slide={slide} />
-                        <p>{index}</p>
-                      </SwiperSlide>
-                    );
-                  })}
-                </div>
-              </Swiper>
+                <Swiper
+                  spaceBetween={30}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
+                  loop={true}
+                  slidesPerView={5}
+                  freeMode={true}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[FreeMode, Pagination, Autoplay]}
+                  className="trendSwiper"
+                >
+                  <div className="trendy">
+                    {slides.length > 0 &&
+                      slides.map((slide, index) => {
+                        return (
+                          <SwiperSlide key={slide.id}>
+                            <TrendCard slide={slide} />
+                            <p>{index}</p>
+                          </SwiperSlide>
+                        );
+                      })}
+                  </div>
+                </Swiper>
               </div>
             </div>
           </div>
         </div>
       </section>
-    
     </>
   );
 }

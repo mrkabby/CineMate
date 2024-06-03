@@ -7,7 +7,7 @@ import Button from './Button';
 
 const Details = ({ open, onClose, item, itemVideo, loading }) => {
 
-    console.log('item', item)
+    // console.log('item', item)
     const onPlayerReady = (event) => {
         // access to player in all event handlers via event.target
         event.target.pauseVideo();
