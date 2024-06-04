@@ -1,104 +1,48 @@
 import React from "react";
+import "./Signup.css";
+import Header from "../header/Header";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
-    <section
-      class="vh-100 bg-image"
-      style={{"background-image": "url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');"}}
-    >
-      <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-        <div class="container h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-              <div class="card" style={{ "border-radius": "15px"}}>
-                <div class="card-body p-5">
-                  <h2 class="text-uppercase text-center mb-5">
-                    Create an account
-                  </h2>
-
-                  <form>
-                    <div class="form-outline mb-4">
-                      <input
-                        type="text"
-                        id="form3Example1cg"
-                        class="form-control form-control-lg"
-                      />
-                      <label class="form-label" for="form3Example1cg">
-                        Your Name
-                      </label>
-                    </div>
-
-                    <div class="form-outline mb-4">
-                      <input
-                        type="email"
-                        id="form3Example3cg"
-                        class="form-control form-control-lg"
-                      />
-                      <label class="form-label" for="form3Example3cg">
-                        Your Email
-                      </label>
-                    </div>
-
-                    <div class="form-outline mb-4">
-                      <input
-                        type="password"
-                        id="form3Example4cg"
-                        class="form-control form-control-lg"
-                      />
-                      <label class="form-label" for="form3Example4cg">
-                        Password
-                      </label>
-                    </div>
-
-                    <div class="form-outline mb-4">
-                      <input
-                        type="password"
-                        id="form3Example4cdg"
-                        class="form-control form-control-lg"
-                      />
-                      <label class="form-label" for="form3Example4cdg">
-                        Repeat your password
-                      </label>
-                    </div>
-
-                    <div class="form-check d-flex justify-content-center mb-5">
-                      <input
-                        class="form-check-input me-2"
-                        type="checkbox"
-                        value=""
-                        id="form2Example3cg"
-                      />
-                      <label class="form-check-label" for="form2Example3g">
-                        I agree all statements in{" "}
-                        <a href="#!" class="text-body">
-                          <u>Terms of service</u>
-                        </a>
-                      </label>
-                    </div>
-
-                    <div class="d-flex justify-content-center">
-                      <button
-                        type="button"
-                        class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
-                      >
-                        Register
-                      </button>
-                    </div>
-
-                    <p class="text-center text-muted mt-5 mb-0">
-                      Have already an account?{" "}
-                      <a href="#!" class="fw-bold text-body">
-                        <u>Login here</u>
-                      </a>
-                    </p>
-                  </form>
-                </div>
-              </div>
+    <>
+      <Header />
+      <div className="signup-display">
+        <div className="signup-wrapper">
+          <form action="">
+            <h1>Sign Up</h1>
+            <div className="signup-input-box">
+              <input type="text" placeholder="Full Name" required />
+              <ion-icon
+                name="accessibility-outline"
+                className="icon"
+              ></ion-icon>
             </div>
-          </div>
+            <div className="signup-input-box">
+              <input type="text" placeholder="Username" required />
+              <ion-icon name="person-outline" className="icon"></ion-icon>
+            </div>
+            <div className="signup-input-box">
+              <input type="text" placeholder="Email" required />
+              <ion-icon name="mail-outline" className="icon"></ion-icon>
+            </div>
+            <div className="signup-input-box">
+              <input type="password" placeholder="Password" required />
+              <ion-icon name="lock-closed-outline" className="icon"></ion-icon>
+            </div>
+            <Link to="/login">
+              <button className="signup-button" type="submit">Sign Up</button>
+            </Link>
+            <div className="login-container">
+              <p>Already have an account?</p>
+              <Link to="/login">
+                <p className="login-link">Login</p>
+              </Link>
+            </div>
+          </form>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 

@@ -17,11 +17,12 @@ const Header = () => {
         </div>
 
         <div className="nav">
-          {location.pathname !== "/landing" && (
+          {location.pathname === "/search-results" && (
             <Link to="/landing">
               <li>Home</li>
             </Link>
           )}
+
           {navListData.map(({ _id, name, link }) => (
             <li key={_id}>
               <ScrollLink

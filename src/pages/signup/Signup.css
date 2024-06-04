@@ -1,21 +1,98 @@
-.gradient-custom-3 {
-    /* fallback for old browsers */
-    background: #84fab0;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
-    }
-    .gradient-custom-4 {
-    /* fallback for old browsers */
-    background: #84fab0;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
-    }
-    
+.signup-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 96vh;
+  background: url("../../Images/cinema.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.signup-wrapper {
+  width: 480px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 10px 40px;
+  margin-top: 40px;
+}
+
+.signup-wrapper h1 {
+  font-size: 25px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.signup-wrapper .signup-input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.signup-input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.signup-input-box input::placeholder {
+  color: #fff;
+}
+
+.signup-input-box ion-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.signup-button {
+  width: 80%;
+  height: 40px;
+  background: #dd0e0e;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  margin-left: 50px;
+}
+
+.signup-button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  background: red;
+}
+
+.login-container {
+  display: flex;
+  padding-top: 15px;
+  text-align: center;
+  justify-content: center;
+}
+
+.login-link {
+  margin-left: 10px;
+  color: #dd0e0e;
+  font-weight: 700;
+}
+
+.login-link:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
