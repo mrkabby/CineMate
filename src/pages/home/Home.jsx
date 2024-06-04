@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
 import Header from "../header/Header";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 export const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -16,11 +16,11 @@ export const Home = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1',
+        "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
         {
           headers: {
-            'Authorization': `Bearer ${process.env.REACT_APP_MOVIE_API_BEARER}`
-          }
+            Authorization: `Bearer ${process.env.REACT_APP_MOVIE_API_BEARER}`,
+          },
         }
       );
       const data = await response.json();
@@ -51,7 +51,10 @@ export const Home = () => {
         >
           {movies.map((movie) => (
             <SwiperSlide key={movie.id} className="heroSlide">
-              <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="Movie"/>
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt="Movie"
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -59,7 +62,7 @@ export const Home = () => {
           <div className="content">
             <h1>Unlimited movies </h1>
             <p>Binge all your favorite movies in one place</p>
-            <Link to="/landing">
+            <Link to="/register">
               <div className="custom-button">
                 <span className="background-overlay"></span>
                 <span className="icon-container">
