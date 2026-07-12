@@ -17,7 +17,7 @@ const MovieSwiper = ({ slides, slideChange }) => {
       slidesPerView={"auto"}
       autoplay={{
         delay: 2500,
-        disableOnIntekaction: false,
+        disableOnInteraction: false,
       }}
       coverflowEffect={{
         rotate: 50,
@@ -32,7 +32,7 @@ const MovieSwiper = ({ slides, slideChange }) => {
     >
       {slides.map((slide) => (
         <SwiperSlide key={slide.id}>
-          <img src={`https://image.tmdb.org/t/p/w500${slide.poster_path}`} alt="Preview" onClick={()=>slideChange(slide.id)} />
+          <img src={`https://image.tmdb.org/t/p/w500${slide.poster_path}`} alt={slide?.title ?? "Preview"} onClick={()=>slideChange(slide.id)} />
         </SwiperSlide>
       ))}
     </Swiper>

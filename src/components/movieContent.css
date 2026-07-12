@@ -63,3 +63,25 @@
 .text-content{
     margin-top: 5rem;
 }
+
+@media (max-width: 768px) {
+    .text-content {
+        margin-top: 3rem;
+    }
+
+    .movie-title {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+
+    .banner .text-content h2 {
+        font-size: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .banner .text-content p {
+        font-size: 0.95rem;
+    }
+}

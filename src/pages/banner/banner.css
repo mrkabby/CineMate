@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    padding: 0 30px;
+    padding: 0 24px;
     overflow: hidden;
     transition: 0.5s;
 }
@@ -48,6 +48,12 @@
 .bgImg.active {
     visibility: visible;
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 0 16px;
+    }
 }
 
 

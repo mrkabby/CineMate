@@ -7,7 +7,7 @@ import Footer from "../footer/Footer";
 
 const SearchResults = () => {
   const location = useLocation();
-  const searchResults = location.state.searchResults;
+  const searchResults = location.state?.searchResults ?? [];
 
   return (
     <>
@@ -22,9 +22,11 @@ const SearchResults = () => {
               <p>Filters</p>
             </div>
             <div className="trial">
-              {searchResults.map((movie) => {
-                return <Card slide={movie} />;
-              })}
+              {searchResults.length > 0 ? (
+                searchResults.map((movie) => <Card key={movie.id} slide={movie} />)
+              ) : (
+                <p className="empty-results">No movies matched your search.</p>
+              )}
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import './Main.css';
 
 const Main = () => {
   return (
-    <main>
+    <main className="main">
         <Schedule/>
 
     </main>

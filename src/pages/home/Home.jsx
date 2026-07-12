@@ -24,7 +24,7 @@ export const Home = () => {
         }
       );
       const data = await response.json();
-      setMovies(data.results);
+      setMovies(Array.isArray(data?.results) ? data.results : []);
     } catch (error) {
       console.error(error);
     }
@@ -33,6 +33,8 @@ export const Home = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  const safeMovies = Array.isArray(movies) ? movies : [];
 
   return (
     <>
@@ -49,11 +51,11 @@ export const Home = () => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
-          {movies.map((movie) => (
+          {safeMovies.map((movie) => (
             <SwiperSlide key={movie.id} className="heroSlide">
               <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt="Movie"
+                src={`https://image.tmdb.org/t/p/w500${movie?.poster_path ?? ""}`}
+                alt={movie?.title ?? "Movie"}
               />
             </SwiperSlide>
           ))}

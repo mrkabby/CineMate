@@ -39,8 +39,12 @@ const Details = ({ open, onClose, item, itemVideo, loading }) => {
                                     <h2>{itemVideo?.name}</h2>
                                     <Button name='Close' onClick={onClose} />
                                 </div>
-                                <YouTube videoId={itemVideo?.key}
-                                    onReady={onPlayerReady} />
+                                {itemVideo?.key ? (
+                                    <div className="video-wrapper">
+                                        <YouTube videoId={itemVideo?.key}
+                                            onReady={onPlayerReady} />
+                                    </div>
+                                ) : null}
                             </div>
 
                             <>
@@ -56,20 +60,6 @@ const Details = ({ open, onClose, item, itemVideo, loading }) => {
                                     <h4>{item.overview}</h4>
                                 </div>
                             </>
-                            <div >
-                                {/* Add null check for item object */}
-                                {item && (
-
-
-                                    <>
-                                        {/* <h1><i>{item.title} |
-<ion-icon style={{color:'gold'}} name="star-half-outline"></ion-icon>
-{item.vote_average} | {item.original_language}</i></h1>
-                                    <h1>{item.release_date}</h1>
-                                    <h3>{item.overview}</h3> */}
-                                    </>
-                                )}
-                            </div >
                         </div>}
                 </div>
             </Modal>

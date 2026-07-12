@@ -8,12 +8,11 @@ function TopRatedCard({ slide }) {
   const { video, loading } = useQueryVideos(slide.id);
 
   return (
-    <div style={{ width: "200px" }} className="">
+    <div className="">
       <div className="movie-card">
         <img
-          style={{ width: "200px" }}
+          alt={slide?.title ?? "Movie poster"}
           src={`https://image.tmdb.org/t/p/w500${slide.poster_path}`}
-          alt=""
         />
 
         <div className="content">

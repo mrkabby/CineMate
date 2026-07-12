@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 :root {
@@ -13,11 +12,14 @@
 
 body {
   background: #000000;
-
-  /* font-family: 'Roboto', sans-serif; Font stack with a fallback to sans-serif */
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 
 }
 
-Header {
-  height: 13vh;
+.App {
+  min-height: 100vh;
+  overflow-x: hidden;
 }

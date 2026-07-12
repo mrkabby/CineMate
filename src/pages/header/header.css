@@ -6,15 +6,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 40px;
+  gap: 16px;
+  padding: 18px 24px;
   transition: 0.5s;
   z-index: 10000;
-  background-color: black;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(12px);
+  flex-wrap: wrap;
 }
 
 .logo {
   font-family: "Racing Sans One", cursive;
-  font-size: 35px;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
   color: #fff;
   letter-spacing: 2px;
   font-weight: 800;
@@ -24,16 +27,18 @@ header {
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   color: #fff;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 500;
-  padding-bottom: 5px;
+  padding-bottom: 0;
 }
 
 .nav li {
-  margin-right: 20px;
+  list-style: none;
   text-transform: uppercase;
-  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  transition: transform 0.3s ease;
 }
 
 .nav:hover {
@@ -43,11 +48,11 @@ header {
 .nav a {
   text-decoration: none;
   color: white;
-  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  transition: transform 0.3s ease;
 }
 
 .nav li:hover {
-  transform: scale(1.1); /* Scale up the list item on hover */
+  transform: scale(1.05);
   color: #dd0e0e;
 }
 
@@ -61,4 +66,32 @@ header {
 
 a {
   text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  header {
+    padding: 16px 18px;
+    justify-content: center;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search {
+    width: min(100%, 520px);
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 14px 14px 16px;
+  }
+
+  .nav {
+    gap: 8px;
+    font-size: 0.9rem;
+  }
 }

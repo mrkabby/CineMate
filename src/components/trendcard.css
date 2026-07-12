@@ -4,6 +4,14 @@ section .trend-card{
     border-radius: 0;
     background: #000000 !important;
      box-shadow: 0 0 16px rgba(255, 255, 255, 0.5); 
+     width: 100%;
+}
+
+section .trend-card img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
 }
 
 section .trend-card::before {

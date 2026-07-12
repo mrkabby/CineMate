@@ -5,6 +5,14 @@ section .movie-card{
     background: #000000 !important;
      box-shadow: 0 0 16px rgba(255, 255, 255, 0.5); 
      gap: 10px;
+     width: 100%;
+}
+
+section .movie-card img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
 }
 
 section .movie-card::before {

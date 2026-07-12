@@ -7,9 +7,11 @@
   .footer-container {
     display: flex;
     justify-content: space-around;
+    gap: 24px;
     max-width: 1200px;
     margin: 0 auto;
-    
+    padding: 0 16px;
+    flex-wrap: wrap;
   }
   
   .footer-section {
@@ -26,9 +28,10 @@
   
   .social-media {
     display: flex;
-    justify-content: space-between;
-    width: 150px;
-    height: 100px;
+    justify-content: flex-start;
+    gap: 16px;
+    width: auto;
+    height: auto;
   }
   
   .social-media a {
@@ -40,7 +43,13 @@
   .footer-bottom {
     text-align: center;
     padding-top: 10px;
-    color: #fff
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+    }
   }
 
   

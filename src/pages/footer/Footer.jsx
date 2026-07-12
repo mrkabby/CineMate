@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-section">
           <h3>About Us</h3>
-          <p>CINEMATE is a family-friendly streaming website that provides over 30,000 <br/> independent movies and documentaries for free for its users</p>
+          <p>CINEMATE is a family-friendly streaming website that provides over 30,000 independent movies and documentaries for free for its users.</p>
         </div>
         <div className="footer-section">
           <h3>Contact Us</h3>

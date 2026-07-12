@@ -12,9 +12,9 @@ const PlayBtn = ({slide}) => {
     <div>
 
     <div className="trailer   d-flex align-items-center justify-content-center active" onClick={() => setOpen(true)}>
-    <a href="#" className="playBtn">
+    <button type="button" className="playBtn">
       <ion-icon name="play-outline"></ion-icon>
-    </a>
+    </button>
     <p>Watch trailer</p>
   </div>
   <Details open={open} onClose={()=> setOpen(false)} item={slide} itemVideo={video} loading={loading}/>

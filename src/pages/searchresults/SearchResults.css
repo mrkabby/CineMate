@@ -1,3 +1,20 @@
+.schedule {
+    padding-top: 110px;
+}
+
+.empty-results {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    grid-column: 1 / -1;
+    padding: 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .schedule {
+        padding-top: 96px;
+    }
+}
 .main {
     position: relative;
     width: 100%;

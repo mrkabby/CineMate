@@ -41,7 +41,13 @@ function Trend() {
                     disableOnInteraction: false,
                   }}
                   loop={true}
-                  slidesPerView={5}
+                  breakpoints={{
+                    0: { slidesPerView: 1.2 },
+                    480: { slidesPerView: 2 },
+                    768: { slidesPerView: 3 },
+                    992: { slidesPerView: 4 },
+                    1200: { slidesPerView: 5 },
+                  }}
                   freeMode={true}
                   pagination={{
                     clickable: true,
@@ -49,17 +55,14 @@ function Trend() {
                   modules={[FreeMode, Pagination, Autoplay]}
                   className="trendSwiper"
                 >
-                  <div className="trendy">
-                    {slides.length > 0 &&
-                      slides.map((slide, index) => {
-                        return (
-                          <SwiperSlide key={slide.id}>
-                            <TrendCard slide={slide} />
-                            <p>{index}</p>
-                          </SwiperSlide>
-                        );
-                      })}
-                  </div>
+                  {slides.length > 0 &&
+                    slides.map((slide) => {
+                      return (
+                        <SwiperSlide key={slide.id}>
+                          <TrendCard slide={slide} />
+                        </SwiperSlide>
+                      );
+                    })}
                 </Swiper>
               </div>
             </div>

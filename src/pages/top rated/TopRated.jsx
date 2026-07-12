@@ -37,7 +37,13 @@ function TopRated() {
                 disableOnInteraction: false,
               }}
               loop={true}
-              slidesPerView={5}
+              breakpoints={{
+                0: { slidesPerView: 1.2 },
+                480: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                992: { slidesPerView: 4 },
+                1200: { slidesPerView: 5 },
+              }}
               freeMode={true}
               pagination={{
                 clickable: true,
@@ -49,7 +55,6 @@ function TopRated() {
                 slides.map((slide, index) => (
                   <SwiperSlide key={slide.id}>
                     <TopRatedCard slide={slide} />
-                    <p>{index}</p>
                   </SwiperSlide>
                 ))}
             </Swiper>

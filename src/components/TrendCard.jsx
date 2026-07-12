@@ -17,6 +17,7 @@ function TrendCard({ slide }) {
           <div className="trend-card" onClick={() => setOpen(true)}>
             <img
               className="img-fluid"
+              alt={slide?.title ?? "Movie poster"}
               src={`https://image.tmdb.org/t/p/w200${slide.poster_path}`}
             />
             <div className="content">
